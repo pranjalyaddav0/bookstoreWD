@@ -4,77 +4,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BookStore Catalogue</title>
+    <title>Engineering BookStore Catalogue</title>
     <link rel="stylesheet" href="catalogue.css">
 </head>
 <body>
 
     <header>
-        <h1>BookStore Catalogue</h1>
-        <p>Explore our collection of books</p>
+        <h1>Engineering BookStore</h1>
+        <p>Find the right books for your engineering subjects</p>
     </header>
 
-    <main class="catalogue">
+    <nav>
+        <a href="#computer">Computer Science</a>
+        <a href="#database">Database</a>
+        <a href="#mechanical">Mechanical</a>
+        <a href="#civil">Civil</a>
+    </nav>
 
-        <div class="book">
-            <img src="https://covers.openlibrary.org/b/isbn/9780143127741-L.jpg"
-                 alt="Sapiens book cover">
-            <h3>Sapiens</h3>
-            <p>Author: Yuval Noah Harari</p>
-            <p class="price">₹399</p>
-            <button onclick="addToCart('Sapiens')">Add to Cart</button>
-        </div>
+    <main>
 
-        <div class="book">
-            <img src="https://covers.openlibrary.org/b/isbn/9780735211292-L.jpg"
-                 alt="Atomic Habits book cover">
-            <h3>Atomic Habits</h3>
-            <p>Author: James Clear</p>
-            <p class="price">₹450</p>
-            <button onclick="addToCart('Atomic Habits')">Add to Cart</button>
-        </div>
+        <!-- Computer Science -->
+        <section id="computer">
+            <h2>Computer Science Engineering</h2>
+            <div class="book-container">
 
-        <div class="book">
-            <img src="https://covers.openlibrary.org/b/isbn/9781501110368-L.jpg"
-                 alt="It Ends with Us book cover">
-            <h3>It Ends with Us</h3>
-            <p>Author: Colleen Hoover</p>
-            <p class="price">₹350</p>
-            <button onclick="addToCart('It Ends with Us')">Add to Cart</button>
-        </div>
+                <div class="book">
+                    <img src="https://covers.openlibrary.org/b/isbn/9780131103627-L.jpg"
+                         alt="C Programming Language">
+                    <h3>The C Programming Language</h3>
+                    <p>Author: Brian W. Kernighan</p>
+                    <p class="price">₹450</p>
+                    <button onclick="addToCart('The C Programming Language', 450)">
+                        Add to Cart
+                    </button>
+                </div>
 
-        <div class="book">
-            <img src="https://covers.openlibrary.org/b/isbn/9780062315007-L.jpg"
-                 alt="The Alchemist book cover">
-            <h3>The Alchemist</h3>
-            <p>Author: Paulo Coelho</p>
-            <p class="price">₹299</p>
-            <button onclick="addToCart('The Alchemist')">Add to Cart</button>
-        </div>
+                <div class="book">
+                    <img src="https://covers.openlibrary.org/b/isbn/9780132350884-L.jpg"
+                         alt="Clean Code">
+                    <h3>Clean Code</h3>
+                    <p>Author: Robert C. Martin</p>
+                    <p class="price">₹550</p>
+                    <button onclick="addToCart('Clean Code', 550)">
+                        Add to Cart
+                    </button>
+                </div>
 
-        <div class="book">
-            <img src="https://covers.openlibrary.org/b/isbn/9780743273565-L.jpg"
-                 alt="The Great Gatsby book cover">
-            <h3>The Great Gatsby</h3>
-            <p>Author: F. Scott Fitzgerald</p>
-            <p class="price">₹250</p>
-            <button onclick="addToCart('The Great Gatsby')">Add to Cart</button>
-        </div>
+                <div class="book">
+                    <img src="https://covers.openlibrary.org/b/isbn/9780262033848-L.jpg"
+                         alt="Introduction to Algorithms">
+                    <h3>Introduction to Algorithms</h3>
+                    <p>Author: Thomas H. Cormen</p>
+                    <p class="price">₹650</p>
+                    <button onclick="addToCart('Introduction to Algorithms', 650)">
+                        Add to Cart
+                    </button>
+                </div>
 
-        <div class="book">
-            <img src="https://covers.openlibrary.org/b/isbn/9780451524935-L.jpg"
-                 alt="1984 book cover">
-            <h3>1984</h3>
-            <p>Author: George Orwell</p>
-            <p class="price">₹280</p>
-            <button onclick="addToCart('1984')">Add to Cart</button>
-        </div>
+            </div>
+        </section>
+
+        <!-- Database -->
+        <section id="database">
+            <h2>Database Management Systems</h2>
+            <div class="book-container">
+
+                <div class="book">
+                    <img src="https://covers.openlibrary.org/b/isbn/9780078022159-L.jpg"
+                         alt="Database System Concepts">
+                    <h3>Database System Concepts</h3>
+                    <p>Author: Abraham Silberschatz</p>
+                    <p class="price">₹600</p>
+                    <button onclick="addToCart('Database System Concepts', 600)">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <div class="book">
+                    <img src="https://covers.openlibrary.org/b/isbn/9780133970777-L.jpg"
+                         alt="Fundamentals of Database Systems">
+                    <h3>Fundamentals of Database Systems</h3>
+                    <p>Author: Ramez Elmasri</p>
+                    <p class="price">₹650</p>
+                    <button onclick="addToCart('Fundamentals of Database Systems', 650)">
+                        Add to Cart
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Mechanical Engineering -->
+        <section id="mechanical">
+            <h2>Mechanical Engineering</h2>
+            <div class="book-container">
+
+                <div class="book">
+                    <img src="https://covers.openlibrary.org/b/isbn/9780133915426-L.jpg"
+                         alt="Thermodynamics">
+                    <h3>Thermodynamics</h3>
+                    <p>Author: Yunus A. Cengel</p>
+                    <p class="price">₹580</p>
+                    <button onclick="addToCart('Thermodynamics', 580)">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <div class="book">
+                    <img src="https://covers.openlibrary.org/b/isbn/9780133918922-L.jpg"
+                         alt="Engineering Mechanics">
+                    <h3>Engineering Mechanics</h3>
+                    <p>Author: R. C. Hibbeler</p>
+                    <p class="price">₹500</p>
+                    <button onclick="addToCart('Engineering Mechanics', 500)">
+                        Add to Cart
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Civil Engineering -->
+        <section id="civil">
+            <h2>Civil Engineering</h2>
+            <div class="book-container">
+
+                <div class="book">
+                    <img src="https://covers.openlibrary.org/b/isbn/9788174092356-L.jpg"
+                         alt="Surveying">
+                    <h3>Surveying</h3>
+                    <p>Author: B. C. Punmia</p>
+                    <p class="price">₹400</p>
+                    <button onclick="addToCart('Surveying', 400)">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <div class="book">
+                    <img src="https://covers.openlibrary.org/b/isbn/9780134292386-L.jpg"
+                         alt="Structural Analysis">
+                    <h3>Structural Analysis</h3>
+                    <p>Author: R. C. Hibbeler</p>
+                    <p class="price">₹620</p>
+                    <button onclick="addToCart('Structural Analysis', 620)">
+                        Add to Cart
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="cart">
+            <h2>Shopping Cart</h2>
+            <ul id="cart-items"></ul>
+            <h3>Total: ₹<span id="total">0</span></h3>
+            <button onclick="clearCart()">Clear Cart</button>
+        </section>
 
     </main>
 
+    <footer>
+        <p>&copy; 2026 Engineering BookStore</p>
+    </footer>
+
     <script>
-        function addToCart(bookName) {
-            alert(bookName + " added to cart!");
+        let cart = [];
+
+        function addToCart(name, price) {
+            cart.push({ name: name, price: price });
+            displayCart();
+        }
+
+        function displayCart() {
+            const items = document.getElementById("cart-items");
+            const totalElement = document.getElementById("total");
+
+            items.innerHTML = "";
+            let total = 0;
+
+            cart.forEach(function(book, index) {
+                const li = document.createElement("li");
+                li.textContent = book.name + " - ₹" + book.price + " ";
+
+                const removeButton = document.createElement("button");
+                removeButton.textContent = "Remove";
+                removeButton.onclick = function() {
+                    cart.splice(index, 1);
+                    displayCart();
+                };
+
+                li.appendChild(removeButton);
+                items.appendChild(li);
+                total += book.price;
+            });
+
+            totalElement.textContent = total;
+        }
+
+        function clearCart() {
+            cart = [];
+            displayCart();
         }
     </script>
 
