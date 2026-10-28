@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookStore Catalogue</title>
+    <link rel="stylesheet" href="catalogue.css">
+</head>
+<body>
+
+    <header>
+        <h1>BookStore Catalogue</h1>
+        <p>Explore our collection of books</p>
+    </header>
+
+    <main class="catalogue">
+
+        <div class="book">
+            <img src="https://covers.openlibrary.org/b/isbn/9780143127741-L.jpg"
+                 alt="Sapiens book cover">
+            <h3>Sapiens</h3>
+            <p>Author: Yuval Noah Harari</p>
+            <p class="price">₹399</p>
+            <button onclick="addToCart('Sapiens')">Add to Cart</button>
+        </div>
+
+        <div class="book">
+            <img src="https://covers.openlibrary.org/b/isbn/9780735211292-L.jpg"
+                 alt="Atomic Habits book cover">
+            <h3>Atomic Habits</h3>
+            <p>Author: James Clear</p>
+            <p class="price">₹450</p>
+            <button onclick="addToCart('Atomic Habits')">Add to Cart</button>
+        </div>
+
+        <div class="book">
+            <img src="https://covers.openlibrary.org/b/isbn/9781501110368-L.jpg"
+                 alt="It Ends with Us book cover">
+            <h3>It Ends with Us</h3>
+            <p>Author: Colleen Hoover</p>
+            <p class="price">₹350</p>
+            <button onclick="addToCart('It Ends with Us')">Add to Cart</button>
+        </div>
+
+        <div class="book">
+            <img src="https://covers.openlibrary.org/b/isbn/9780062315007-L.jpg"
+                 alt="The Alchemist book cover">
+            <h3>The Alchemist</h3>
+            <p>Author: Paulo Coelho</p>
+            <p class="price">₹299</p>
+            <button onclick="addToCart('The Alchemist')">Add to Cart</button>
+        </div>
+
+        <div class="book">
+            <img src="https://covers.openlibrary.org/b/isbn/9780743273565-L.jpg"
+                 alt="The Great Gatsby book cover">
+            <h3>The Great Gatsby</h3>
+            <p>Author: F. Scott Fitzgerald</p>
+            <p class="price">₹250</p>
+            <button onclick="addToCart('The Great Gatsby')">Add to Cart</button>
+        </div>
+
+        <div class="book">
+            <img src="https://covers.openlibrary.org/b/isbn/9780451524935-L.jpg"
+                 alt="1984 book cover">
+            <h3>1984</h3>
+            <p>Author: George Orwell</p>
+            <p class="price">₹280</p>
+            <button onclick="addToCart('1984')">Add to Cart</button>
+        </div>
+
+    </main>
+
+    <script>
+        function addToCart(bookName) {
+            alert(bookName + " added to cart!");
+        }
+    </script>
+
+</body>
+</html>
