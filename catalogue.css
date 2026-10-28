@@ -1,133 +1,225 @@
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: "Times New Roman", serif;
+    background: white;
+    color: black;
 }
 
-header {
-    background-color: #24344d;
-    color: white;
-    text-align: center;
-    padding: 25px 15px;
-}
-
-header h1 {
-    margin: 0 0 10px;
-}
-
-nav {
-    background-color: #172538;
-    padding: 15px;
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 12px;
-    display: inline-block;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-section {
-    max-width: 1200px;
-    margin: 30px auto;
-    padding: 0 20px;
-}
-
-section h2 {
-    border-bottom: 2px solid #24344d;
-    padding-bottom: 10px;
-    color: #24344d;
-}
-
-.book-container {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 20px;
-}
-
-.book {
-    background-color: white;
-    padding: 20px;
-    text-align: center;
+/* Pink header */
+.header {
+    height: 130px;
+    background: pink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     border: 1px solid #ddd;
-    border-radius: 5px;
 }
 
-.book img {
-    width: 140px;
-    height: 190px;
+.header h1 {
+    font-size: 42px;
+    text-align: center;
+}
+
+.logo {
+    position: absolute;
+    left: 40px;
+    top: 0;
+    width: 125px;
+    height: 122px;
+    background: white;
+    border: 1px solid #ddd;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
     object-fit: contain;
 }
 
-.book h3 {
-    font-size: 17px;
-    min-height: 40px;
+/* Purple navigation */
+.navbar {
+    min-height: 70px;
+    background: #8585e8;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-bottom: 1px solid black;
 }
 
-.book p {
-    font-size: 14px;
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 22px 12px;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #fff3a6;
+}
+
+/* Main layout */
+.main-container {
+    display: flex;
+    min-height: calc(100vh - 200px);
+}
+
+/* Left sidebar */
+.sidebar {
+    width: 16%;
+    min-width: 150px;
+    border-right: 2px solid black;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sidebar a {
+    color: blue;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.sidebar a:hover {
+    color: purple;
+    text-decoration: underline;
+}
+
+/* Catalogue content */
+.catalogue-content {
+    flex: 1;
+    padding: 30px;
+    min-width: 0;
+}
+
+.catalogue-content h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.description {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* Table */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 720px;
+}
+
+th {
+    background: #ffc0cb;
+    color: black;
+    font-size: 18px;
+    padding: 15px 10px;
+    border: 1px solid black;
+}
+
+td {
+    padding: 12px;
+    border: 1px solid black;
+    font-size: 17px;
+    line-height: 1.8;
+    vertical-align: middle;
+}
+
+tbody tr {
+    background: white;
+}
+
+tbody tr:hover {
+    background: #fff5f7;
+}
+
+.book-cover {
+    width: 100px;
+    height: 130px;
+    object-fit: contain;
+    display: block;
+    margin: auto;
 }
 
 .price {
-    font-size: 18px !important;
     font-weight: bold;
-    color: #24344d;
+    white-space: nowrap;
 }
 
-button {
-    padding: 10px 15px;
-    background-color: #24344d;
+/* Add to Cart button */
+.cart-btn {
+    background: #8585e8;
     color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #405878;
-}
-
-.cart {
-    background: white;
-    padding: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid #6666c9;
     border-radius: 5px;
+    padding: 10px 12px;
+    font-size: 15px;
+    cursor: pointer;
+    white-space: nowrap;
 }
 
-.cart li {
-    margin: 12px 0;
+.cart-btn:hover {
+    background: #6868d6;
 }
 
-footer {
-    background-color: #24344d;
-    color: white;
-    padding: 15px;
-    text-align: center;
+#message {
+    margin-top: 20px;
+    font-size: 17px;
+    color: green;
 }
 
-@media (max-width: 750px) {
-    .book-container {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+/* Mobile layout */
+@media (max-width: 650px) {
+    .header {
+        height: 100px;
     }
 
-    nav a {
-        margin: 6px;
+    .header h1 {
+        font-size: 25px;
+        margin-left: 90px;
     }
-}
 
-@media (max-width: 480px) {
-    .book-container {
-        grid-template-columns: 1fr;
+    .logo {
+        left: 5px;
+        width: 80px;
+        height: 90px;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        padding: 12px 8px;
+    }
+
+    .sidebar {
+        width: 90px;
+        min-width: 90px;
+        padding: 8px;
+    }
+
+    .sidebar a {
+        font-size: 16px;
+    }
+
+    .catalogue-content {
+        padding: 15px 8px;
+    }
+
+    .catalogue-content h2 {
+        font-size: 23px;
     }
 }
