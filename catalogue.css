@@ -1,8 +1,12 @@
 
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     color: #333;
 }
 
@@ -10,24 +14,46 @@ header {
     background-color: #24344d;
     color: white;
     text-align: center;
-    padding: 25px;
+    padding: 25px 15px;
 }
 
 header h1 {
     margin: 0 0 10px;
 }
 
-header p {
-    margin: 0;
+nav {
+    background-color: #172538;
+    padding: 15px;
+    text-align: center;
 }
 
-.catalogue {
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    display: inline-block;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+section h2 {
+    border-bottom: 2px solid #24344d;
+    padding-bottom: 10px;
+    color: #24344d;
+}
+
+.book-container {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 25px;
-    padding: 30px;
-    max-width: 1100px;
-    margin: auto;
+    gap: 20px;
 }
 
 .book {
@@ -39,48 +65,69 @@ header p {
 }
 
 .book img {
-    width: 150px;
-    height: 210px;
+    width: 140px;
+    height: 190px;
     object-fit: contain;
 }
 
 .book h3 {
-    margin: 15px 0 8px;
+    font-size: 17px;
+    min-height: 40px;
 }
 
 .book p {
-    margin: 8px 0;
+    font-size: 14px;
 }
 
 .price {
-    font-size: 18px;
+    font-size: 18px !important;
     font-weight: bold;
     color: #24344d;
 }
 
 button {
+    padding: 10px 15px;
     background-color: #24344d;
     color: white;
     border: none;
-    padding: 10px 18px;
+    border-radius: 4px;
     cursor: pointer;
-    border-radius: 3px;
 }
 
 button:hover {
     background-color: #405878;
 }
 
+.cart {
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.cart li {
+    margin: 12px 0;
+}
+
+footer {
+    background-color: #24344d;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
 @media (max-width: 750px) {
-    .catalogue {
+    .book-container {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        padding: 15px;
-        gap: 15px;
+    }
+
+    nav a {
+        margin: 6px;
     }
 }
 
-@media (max-width: 450px) {
-    .catalogue {
+@media (max-width: 480px) {
+    .book-container {
         grid-template-columns: 1fr;
     }
 }
