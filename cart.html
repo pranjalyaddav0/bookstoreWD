@@ -1,90 +1,61 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart - Engineering BookStore</title>
+    <title>Books Store Cart</title>
     <link rel="stylesheet" href="cart.css">
 </head>
 <body>
 
-    <header>
-        <h2>Engineering BookStore</h2>
-        <nav>
-            <a href="index.html">Login</a>
-            <a href="catalogue.html">Catalogue</a>
-            <a href="cart.html">My Cart</a>
-        </nav>
-    </header>
+<header>
+    <img src="logo.png">
+    <h1>BOOKS STORE</h1>
+</header>
 
-    <main class="container">
-        <h1>My Shopping Cart</h1>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="login.html">Login</a>
+    <a href="registration.html">Registration</a>
+    <a href="catalogue.html">Catalogue</a>
+    <a href="cart.html">Cart</a>
+</nav>
 
-        <div id="cart-items"></div>
+<div class="main">
+    <aside>
+        <a href="#">CSE</a>
+        <a href="#">ECE</a>
+        <a href="#">EEE</a>
+        <a href="#">CIVIL</a>
+    </aside>
 
-        <div class="total-box">
-            <h3>Total Amount: ₹<span id="total">0</span></h3>
-            <button onclick="checkout()">Proceed to Checkout</button>
-        </div>
-    </main>
-
-    <script>
-        // Read cart items saved by the catalogue page
-        let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-        function displayCart() {
-            const cartItems = document.getElementById("cart-items");
-            const totalElement = document.getElementById("total");
-
-            cartItems.innerHTML = "";
-            let total = 0;
-
-            if (cart.length === 0) {
-                cartItems.innerHTML = "<p>Your cart is empty.</p>";
-                totalElement.textContent = "0";
-                return;
-            }
-
-            cart.forEach((book, index) => {
-                const name = book.title || book.name || "Book";
-                const price = Number(book.price) || 0;
-
-                total += price;
-
-                cartItems.innerHTML += `
-                    <div class="cart-item">
-                        <div>
-                            <h3>${name}</h3>
-                            <p>Price: ₹${price}</p>
-                        </div>
-                        <button onclick="removeBook(${index})">
-                            Remove
-                        </button>
-                    </div>
-                `;
-            });
-
-            totalElement.textContent = total;
-        }
-
-        function removeBook(index) {
-            cart.splice(index, 1);
-            localStorage.setItem("cart", JSON.stringify(cart));
-            displayCart();
-        }
-
-        function checkout() {
-            if (cart.length === 0) {
-                alert("Your cart is empty!");
-                return;
-            }
-
-            alert("Checkout page will be connected next.");
-        }
-
-        displayCart();
-    </script>
+    <section>
+        <h2>SHOPPING CART</h2>
+        <table>
+            <tr>
+                <th>Book Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Amount</th>
+            </tr>
+            <tr>
+                <td>Java 2</td>
+                <td>₹35.5</td>
+                <td>2</td>
+                <td>₹71</td>
+            </tr>
+            <tr>
+                <td>XML Bible</td>
+                <td>₹40.5</td>
+                <td>1</td>
+                <td>₹40.5</td>
+            </tr>
+            <tr>
+                <td colspan="3"><b>Total Amount</b></td>
+                <td>₹111.5</td>
+            </tr>
+        </table>
+    </section>
+</div>
 
 </body>
 </html>
